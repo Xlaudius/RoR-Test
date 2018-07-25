@@ -1,2 +1,11 @@
-<p> <%= @todo.description %> </p>
-<p><%= @todo.completed %></p>
+<p>
+  <strong>Descripcion:</strong>
+  <%= @todo.description %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @todo.completed %>
+</p>
+
+<%= link_to 'Back', todos_path %>

@@ -1,8 +1,11 @@
+<h1><%= @todos.description %></h1>
+<h2><%= @todos.status %></h2>
+
+
 <%= form_with model: @todo, local: true do |f| %>
   <%= f.check_box :completed %>
 
   <%= f.label :description, "Descripcion" %>
   <%= f.text_field :description %>
   <%= f.submit "Guardar" %>
-
 <% end %>

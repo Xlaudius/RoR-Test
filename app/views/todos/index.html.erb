@@ -21,6 +21,7 @@
         <td><%= todo.description %></td>
         <td><%= @status %></td>
         <td><%= link_to 'Show', todo %></td>
+        <td><%= link_to 'Edit', edit_path(todo) %></td>
       </tr>
     <% end %>
   </tbody>

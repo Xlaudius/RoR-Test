@@ -24,7 +24,7 @@
             <td><%= link_to '', completed_path(todo), class:"btn btn-success glyphicon glyphicon-ok" %></td>
             <td><%= link_to '', todo, class:"btn btn-info glyphicon glyphicon-search" %></td>
             <td><%= link_to '', edit_path(todo), class:"btn btn-warning glyphicon glyphicon-pencil" %></td>
-            <td><%= link_to '', todo, method: :delete, class:"btn btn-danger glyphicon glyphicon-trash"%></td>
+            <td><%= link_to '', todo, method: :delete, class:"btn btn-danger glyphicon glyphicon-trash", data: { confirm: 'HEY! you cant undo this action!, well... you can but i haven\'t coded it, so are you SURE!?' }%></td>
           </tr>
         <% end %>
       </tbody>

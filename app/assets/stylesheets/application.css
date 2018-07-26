@@ -23,3 +23,8 @@
   background-color: cornsilk;
   color: black;
 }
+
+.todo-btn{
+  height: 60px;
+  max-height: 8%;
+}

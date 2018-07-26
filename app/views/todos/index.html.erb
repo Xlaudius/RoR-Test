@@ -1,10 +1,8 @@
-  <div>
-  <%= link_to "Crear un ToDo", todos_new_path, class:"btn btn-success col-md-8 col-md-offset-2" %>
+  <div class="row">
+    <%= link_to "Crear un ToDo", todos_new_path, class:"btn btn-success col-md-8 col-md-offset-3 col-md-2 todo-btn" %>
+    <%= link_to "Sorted To Do's", todos_list_path, class:"btn btn-info col-md-8 col-md-offset-3 col-md-2 todo-btn" %> 
   </div>
 
-  <div>  
-  <%= link_to "Sorted To Do's", todos_list_path, class:"btn btn-info col-md-8 col-md-offset-2" %> 
-  </div>   
 
 <div class="row">
   <div class="col-md-8 col-md-offset-2">
@@ -29,10 +27,10 @@
           <tr>
             <td><%= todo.description %></td>
             <td><%= @status %></td>
-            <td><%= link_to 'Completado?', completed_path(todo), class:"btn btn-success" %></td>
-            <td><%= link_to 'Mostrar', todo, class:"btn btn-info" %></td>
-            <td><%= link_to 'Editar', edit_path(todo), class:"btn btn-warning" %></td>
-            <td><%= link_to 'Eliminar', todo, method: :delete, class:"btn btn-danger"%></td>
+            <td><%= link_to '', completed_path(todo), class:"btn btn-success glyphicon glyphicon-ok" %></td>
+            <td><%= link_to '', todo, class:"btn btn-info glyphicon glyphicon-search" %></td>
+            <td><%= link_to '', edit_path(todo), class:"btn btn-warning glyphicon glyphicon-pencil" %></td>
+            <td><%= link_to '', todo, method: :delete, class:"btn btn-danger glyphicon glyphicon-trash"%></td>
           </tr>
         <% end %>
       </tbody>

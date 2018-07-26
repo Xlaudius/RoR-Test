@@ -1,34 +1,37 @@
+<section>
+  <%= link_to "Crear un ToDo", todos_new_path, class:"btn btn-success col-md-8 col-md-offset-2" %>
+</section>
 
-<p><%= link_to "Crear un ToDo", todos_new_path %></p>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <table class="table table-well">
+      <thead>
+        <tr>
+          <th>To do</th>
+          <th>Status</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @todos.each do |todo| %>
+          <% if todo.completed == true %>
+            <% @status = "Completed" %>
+            <% @checked = true %>
+          <% else %>
+            <% @status = "In progress..." %>
+            <% @checked = false %>
+          <% end %>
 
-<table class="table table-well">
-  <thead>
-    <tr>
-      <th>Check</th>
-      <th>To do</th>
-      <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @todos.each do |todo| %>
-      <% if todo.completed == true %>
-        <% @status = "Completed" %>
-        <% @checked = true %>
-      <% else %>
-        <% @status = "In progress..." %>
-        <% @checked = false %>
-      <% end %>
-
-
-      <tr>
-      <td><%= check_box_tag('status', value = "1", checked = todo.completed, options = {}) %></td>
-        <td><%= todo.description %></td>
-        <td><%= @status %></td>
-        <td><%= link_to 'Mostrar', todo %></td>
-        <td><%= link_to 'Editar', edit_path(todo) %></td>
-        <td><%= link_to 'Eliminar', todo, method: :delete %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <tr>
+            <td><%= todo.description %></td>
+            <td><%= @status %></td>
+            <td><%= link_to 'Completado?', completed_path(todo), class:"btn btn-success" %></td>
+            <td><%= link_to 'Mostrar', todo, class:"btn btn-info" %></td>
+            <td><%= link_to 'Editar', edit_path(todo), class:"btn btn-warning" %></td>
+            <td><%= link_to 'Eliminar', todo, method: :delete, class:"btn btn-danger"%></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

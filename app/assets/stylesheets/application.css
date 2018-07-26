@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+
+ body{
+   background-color: whitesmoke;
+ }
+
+ .navbar-default {
+  background-color: cornsilk;
+  color: black;
+}
+
+.td-button

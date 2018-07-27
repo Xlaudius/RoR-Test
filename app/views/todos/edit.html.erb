@@ -1,11 +1,20 @@
-<h1><%= @todo.description %></h1>
-<h2><%= @todo.completed %></h2>
 
+<div class="row">
+<h1 class="col-md-4 col-md-offset-1"><%= @todo.description %></h1>
+</div>
+<div class="row">
+  <div class="container list-container">
+    <%= form_with model: @todo, local: true do |f| %>
+      <h3>Status: </h3>
+      <h4><%= @todo.completed %></h4>
+      <h4>Check the box below to chage the current status!</h4>
+      <%= f.check_box :completed, class:"form form-control" %>
 
-<%= form_with model: @todo, local: true do |f| %>
-  <%= f.check_box :completed %>
-
-  <%= f.label :description, "Descripcion" %>
-  <%= f.text_field :description %>
-  <%= f.submit "Guardar" %>
-<% end %>
+      <%= f.label :description, "Update the task description in the box below!" %>
+      <%= f.text_field :description, class:"form form-control" %>
+      <br>
+      <%= f.submit "Update Task!", class:"btn btn-primary" %>
+    <% end %>
+    <br>
+  </div>
+</div>

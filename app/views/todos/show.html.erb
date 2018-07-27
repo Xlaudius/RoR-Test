@@ -1,11 +1,20 @@
-<p>
-  <strong>Descripcion:</strong>
-  <%= @todo.description %>
-</p>
+<div class"row">
+  <div class="container list-container">
+    <h1>Here is what i've got on your task...</h1>
+    <h3>The description of the task is:</h3>
+    <h4><%= @todo.description %></h4>
+    <br>
+    <h4>It was born into this world on the <%= @todo.created_at.strftime("%d of %B %Y.") %></h4>
+      <p>How can i forget!, it was a beautiful <%= @todo.created_at.strftime("%A") %>! </p>
+    <br>
+    <% if @todo.completed == true %>
+      <% status = 'COMPLETED, Congrats!' %>
+    <% else %>
+      <% status = 'INCOMPLETE, so you better get started!' %>
+    <% end %>
 
-<p>
-  <strong>Status:</strong>
-  <%= @todo.completed %>
-</p>
-
-<%= link_to 'Back', todos_path %>
+    <h4>And, as far as i can see it's <%= status %></h4>
+  <br>
+  <br>
+  </div>
+</div>

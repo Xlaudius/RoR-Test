@@ -14,16 +14,16 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-light navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand glyphicon glyphicon-home" href="<%= todos_path %>">
+      <a id="anchor" class="navbar-brand glyphicon glyphicon-home a-color" href="<%= todos_path %>">
       Index
       </a>
-      <a class="navbar-brand glyphicon glyphicon glyphicon-list" href="<%= todos_list_path %>">
+      <a id="anchor" class="navbar-brand glyphicon glyphicon glyphicon-list a-color" href="<%= todos_list_path %>">
       Sorted
       </a>
-      <a class="navbar-brand glyphicon glyphicon glyphicon-check" href="<%= new_todo_path %>">
+      <a id="anchor" class="navbar-brand glyphicon glyphicon-check a-color" href="<%= new_todo_path %>">
       New
       </a>      
     </div>

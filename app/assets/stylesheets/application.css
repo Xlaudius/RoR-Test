@@ -16,16 +16,51 @@
 
 
  body{
-   background-color: whitesmoke;
-   padding-top: 80px;
+  background-image: url(https://blog.hdwallsource.com/wp-content/uploads/2014/11/free-gradient-wallpaper-26032-26717-hd-wallpapers.jpg);
+  border-color: black;
+  padding-top: 80px;
+ }
+
+ #anchor{
+   color: black;
  }
 
  .navbar-default {
-  background-color: cornsilk;
+  background-color: rgba(0,0,0,0.5);
   color: black;
 }
 
 .todo-btn{
   height: 60px;
   max-height: 8%;
+}
+
+.list-container{
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.5);
+  color: aliceblue;
+  font-family: sans-serif;
+}
+
+th, td{
+  color: aliceblue;
+}
+
+.index-container{
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 30px;  
+  font-size: 2rem;
+  font-family: sans-serif;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: rgba(0,0,0,0.8);
+}
+
+th{
+  font-size: 2.5rem;
+}
+
+h1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
